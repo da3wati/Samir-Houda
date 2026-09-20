@@ -12,6 +12,8 @@
 <title>دعوة زفاف سمير وهدى</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
 
 *{
     margin:0;
@@ -248,22 +250,253 @@ img{
 
 
 /* =====================================================
-   TRANSPARENT IMAGES
+   TEXT INVITATION
    ===================================================== */
 
-.transparent-image-section{
-    width:100%;
+.text-invitation-section{
+    width:min(94%,760px);
+    margin:0 auto;
+    padding:20px 18px 35px;
+    text-align:center;
+    direction:rtl;
+}
 
-    line-height:0;
+.text-invitation-card{
+    position:relative;
+    padding:34px 18px 38px;
+    border:1px solid rgba(168,118,60,.72);
+    border-radius:26px;
+    background:rgba(255,255,255,.70);
+    box-shadow:0 12px 35px rgba(55,30,18,.10);
+    overflow:hidden;
+}
 
+.text-invitation-card::before,
+.text-invitation-card::after{
+    content:"✦";
+    position:absolute;
+    color:#a8783c;
+    font-size:25px;
+    opacity:.8;
+}
+
+.text-invitation-card::before{top:12px;left:18px;}
+.text-invitation-card::after{bottom:12px;right:18px;}
+
+.invitation-basmala{
+    font-family:'Amiri',serif;
+    font-size:clamp(30px,7vw,48px);
+    color:#a8783c;
+    line-height:1.5;
+    margin-bottom:12px;
+}
+
+.invitation-verse{
+    font-family:'Amiri',serif;
+    font-size:clamp(18px,4.7vw,28px);
+    line-height:2;
+    color:#222;
+    margin:0 auto;
+    max-width:700px;
+}
+
+.invitation-source{
+    font-family:'Amiri',serif;
+    font-size:clamp(17px,4vw,23px);
+    color:#333;
+    margin-top:5px;
+}
+
+.invitation-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin:20px auto;
+    color:#a8783c;
+}
+
+.invitation-divider::before,
+.invitation-divider::after{
+    content:"";
+    height:1px;
+    width:min(28%,150px);
+    background:#a8783c;
+}
+
+.invitation-divider span{
+    font-size:23px;
+}
+
+.invitation-intro{
+    font-family:'Cairo',sans-serif;
+    font-size:clamp(18px,4.5vw,25px);
+    color:#333;
+    margin-bottom:5px;
+}
+
+.invitation-family{
+    font-family:'Amiri',serif;
+    font-size:clamp(32px,8vw,54px);
+    font-weight:700;
+    color:#a8783c;
+    line-height:1.35;
+    margin:0 0 8px;
+}
+
+.invitation-text{
+    font-family:'Cairo',sans-serif;
+    font-size:clamp(16px,4vw,22px);
+    line-height:1.9;
+    color:#333;
+    margin:0 auto 14px;
+}
+
+.invitation-names{
+    direction:ltr;
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(48px,12vw,86px);
+    line-height:1.15;
+    color:#a8783c;
+    margin:12px 0 18px;
+    letter-spacing:.5px;
+    white-space:nowrap;
     text-align:center;
 }
 
-.transparent-image-section img{
-    width:100%;
-    height:auto;
+.invitation-names span{
+    font-size:.7em;
+    margin:0 10px;
+}
 
-    margin:0 auto;
+.invitation-note{
+    font-family:'Cairo',sans-serif;
+    font-size:clamp(16px,4vw,22px);
+    line-height:1.9;
+    color:#333;
+    margin-bottom:22px;
+}
+
+.invitation-details{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    align-items:stretch;
+    margin-top:12px;
+}
+
+.invitation-detail{
+    padding:8px 12px;
+    min-height:130px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cairo',sans-serif;
+    color:#333;
+}
+
+.invitation-detail + .invitation-detail{
+    border-right:1px solid rgba(168,118,60,.65);
+}
+
+.invitation-icon{
+    font-size:34px;
+    color:#a8783c;
+    line-height:1;
+    margin-bottom:10px;
+}
+
+.invitation-detail-title{
+    font-size:clamp(15px,3.6vw,20px);
+    font-weight:600;
+}
+
+.invitation-detail-value{
+    font-size:clamp(14px,3.4vw,19px);
+    line-height:1.65;
+    margin-top:3px;
+}
+
+.invitation-honor{
+    font-family:'Amiri',serif;
+    font-size:clamp(27px,6vw,42px);
+    color:#a8783c;
+    margin-top:18px;
+}
+
+.invitation-heart{
+    color:#a8783c;
+    font-size:28px;
+    margin-top:8px;
+}
+
+
+/* =====================================================
+   BILINGUAL FRENCH
+   ===================================================== */
+.invitation-french{
+    direction:ltr;
+    font-family:'Playfair Display',Georgia,serif;
+    color:#333;
+    line-height:1.8;
+}
+
+.invitation-french-intro{
+    font-size:clamp(15px,3.8vw,21px);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:4px;
+}
+
+.invitation-french-family{
+    font-size:clamp(28px,7vw,48px);
+    letter-spacing:1px;
+    color:#a8783c;
+    margin-bottom:10px;
+}
+
+.invitation-french-text{
+    font-size:clamp(14px,3.5vw,20px);
+    line-height:1.8;
+    margin:0 auto 12px;
+}
+
+.invitation-french-note{
+    direction:ltr;
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(14px,3.5vw,20px);
+    line-height:1.8;
+    margin-bottom:22px;
+    color:#333;
+}
+
+.invitation-detail-fr{
+    display:block;
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(12px,3vw,17px);
+    line-height:1.55;
+    margin-top:2px;
+}
+
+.invitation-honor-fr{
+    direction:ltr;
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:clamp(15px,3.8vw,23px);
+    letter-spacing:1px;
+    margin-top:4px;
+    color:#a8783c;
+}
+
+@media (max-width:600px){
+    .text-invitation-card{padding:28px 12px 32px;}
+    .invitation-details{grid-template-columns:1fr;}
+    .invitation-detail{min-height:95px;padding:10px 5px;}
+    .invitation-detail + .invitation-detail{border-right:0;border-top:1px solid rgba(168,118,60,.45);}
+    .invitation-names{
+        font-size:clamp(30px,9vw,58px);
+        white-space:nowrap;
+        letter-spacing:0;
+    }
 }
 
 
@@ -549,6 +782,8 @@ img{
     color:#4a2d20;
 
     letter-spacing:.5px;
+    white-space:nowrap;
+    text-align:center;
 }
 
 .final-names span{
@@ -799,27 +1034,112 @@ img{
 
 
             <!-- =================================================
-                 INVITATION IMAGE 1
+                 TEXT INVITATION — لا توجد صورة هنا
                  ================================================= -->
 
-            <section class="transparent-image-section reveal">
+            <section class="text-invitation-section reveal">
 
-                <img
-                    src="invitation-1.png"
-                    alt="رسالة الدعوة">
+                <div class="text-invitation-card">
 
-            </section>
+                    <div class="invitation-basmala">
+                        بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
+                    </div>
 
+                    <div class="invitation-verse">
+                        وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنْفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا<br>
+                        وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+                    </div>
 
-            <!-- =================================================
-                 INVITATION IMAGE 2
-                 ================================================= -->
+                    <div class="invitation-source">
+                        صدق الله العظيم
+                    </div>
 
-            <section class="transparent-image-section reveal">
+                    <div class="invitation-divider"><span>✦</span></div>
 
-                <img
-                    src="invitation-2.png"
-                    alt="تفاصيل الدعوة">
+                    <div class="invitation-intro">
+                        بكل حب واحترام
+                    </div>
+
+                    <div class="invitation-french invitation-french-intro">
+                        Avec amour et respect
+                    </div>
+
+                    <div class="invitation-family">
+                        عائلة العروسين
+                    </div>
+
+                    <div class="invitation-french invitation-french-family">
+                        La famille des mariés
+                    </div>
+
+                    <div class="invitation-text">
+                        تتشرف بدعوتكم لحضور حفل زفاف<br>
+                        ابنهم وابنتهم العزيزين
+                    </div>
+
+                    <div class="invitation-french invitation-french-text">
+                        A l’honneur de vous inviter à assister<br>
+                        au mariage de leurs chers
+                        <strong>Cher fils et fille</strong>
+                    </div>
+
+                    <div class="invitation-names">
+                        Samir <span>&amp;</span> Houda
+                    </div>
+
+                    <div class="invitation-note">
+                        وسنسعد كثيرًا بحضوركم معنا<br>
+                        ومشاركتنا هذه الليلة المميزة.
+                    </div>
+
+                    <div class="invitation-french-note">
+                        Nous serions ravis de vous compter<br>
+                        parmi nous en cette nuit si spéciale.
+                    </div>
+
+                    <div class="invitation-details">
+
+                        <div class="invitation-detail">
+                            <div class="invitation-icon">▣</div>
+                            <div class="invitation-detail-title">الثلاثاء</div>
+                            <span class="invitation-detail-fr">Mardi</span>
+                            <div class="invitation-detail-value" dir="ltr">10 - 11 - 2026</div>
+                        </div>
+
+                        <div class="invitation-detail">
+                            <div class="invitation-icon">◷</div>
+                            <div class="invitation-detail-title">ابتداءً من الساعة</div>
+                            <span class="invitation-detail-fr">À partir de</span>
+                            <div class="invitation-detail-value" dir="ltr">15:00</div>
+                        </div>
+
+                        <div class="invitation-detail">
+                            <div class="invitation-icon">⌖</div>
+                            <div class="invitation-detail-title">قاعة الحفلات</div>
+                            <span class="invitation-detail-fr">Salle des fêtes</span>
+                            <div class="invitation-detail-value">
+                                رويال بن فليس<br>
+                                <span class="invitation-detail-fr">La Royal Benflis</span><br>
+                                باتنة<br>
+                                <span class="invitation-detail-fr">Batna</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="invitation-divider"><span>✦</span></div>
+
+                    <div class="invitation-honor">
+                        حضوركم يشرفنا
+                    </div>
+
+                    <div class="invitation-honor-fr">
+                        Votre présence nous honorera
+                    </div>
+
+                    <div class="invitation-heart">♥</div>
+
+                </div>
 
             </section>
 
@@ -1019,7 +1339,7 @@ img{
 
                         Samir
                         <span>&amp;</span>
-                        Huda
+                        Houda
 
                     </div>
 
@@ -1245,8 +1565,8 @@ musicToggle.addEventListener(
 const weddingDate =
     new Date(
         2026,
-        9,
-        11,
+        10,
+        10,
         15,
         0,
         0
